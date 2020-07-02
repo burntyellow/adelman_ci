@@ -17,4 +17,3 @@ install:
   - python setup.py develop
 script:
   - ./test_install.sh
-
