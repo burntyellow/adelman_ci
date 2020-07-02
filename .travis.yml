@@ -1,0 +1,20 @@
+language: python
+python:
+  - 3.7
+before_install:
+  - sudo apt-get -y install libopenmpi-dev openmpi-bin libhdf5-openmpi-dev
+install:
+  - pip install cython
+  - pip install numpy
+  - pip install scipy
+  - pip install h5py
+  - pip install pyyaml
+  - pip install pyzmq
+  - pip install matplotlib
+  - pip install blessings
+  - pip install ipykernel
+  - pip install mpi4py
+  - python setup.py develop
+script:
+  - ./test_install.sh
+
